@@ -1,0 +1,284 @@
+/* Estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del encabezado */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #5c1ca8;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    background: url('../images/Kelyn.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.name-title h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.contact-info {
+    margin-top: 5px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+.contact-info i {
+    margin-right: 8px;  /* Espacio entre el ícono y el texto */
+    color: #5c1ca8;     /* Color del ícono */
+    font-size: 16px;    /* Tamaño del ícono */
+}
+
+/* Estilos de la línea de tiempo */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.event {
+    position: relative;
+    margin-bottom: 60px;
+    padding-left: 160px;  /* Aumentado para separar más el texto */
+}
+
+.event .circle {
+    position: absolute;
+    left: 0px;  /* Mantenido para alinear a la izquierda */
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(145deg, #6822c3, #5c1ca8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(92, 28, 168, 0.3);
+    z-index: 2;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.event .content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.event .content h3 {
+    color: #5c1ca8;
+    margin: 0 0 15px 0;
+    font-size: 1.2em;
+}
+
+.event .content ul.event-details {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #666;
+}
+
+.event .content ul.event-details li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.event .content ul.event-details li:last-child {
+    margin-bottom: 0;
+}
+
+/* Efectos hover */
+.event:hover .circle {
+    transform: scale(1.1);
+}
+
+.event:hover .content {
+    transform: translateX(10px);
+}
+
+/* Sección de Referencias */
+.references {
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.references h2 {
+    color: #5c1ca8;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.reference-intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.references-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reference-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.reference-item h3 {
+    color: #5c1ca8;
+    margin: 0 0 5px 0;
+}
+
+.reference-item .position {
+    color: #666;
+    margin: 0 0 10px 0;
+    font-size: 0.9em;
+}
+
+.reference-item a {
+    color: #5c1ca8;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reference-item a:hover {
+    color: #6822c3;
+}
+
+.reference-note {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Estilos para la página de referencias */
+.back-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-link a {
+    color: #5c1ca8;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link a:hover {
+    background-color: #f0f0f0;
+}
+/* Enlaces del pie de página */
+footer .social-links {
+    text-align: center;
+    margin-top: 5px;
+    display: flex;          /* Nuevo: usar flexbox */
+    justify-content: center; /* Nuevo: centrar horizontalmente */
+    gap: 20px;             /* Nuevo: espacio entre enlaces */
+    flex-wrap: wrap;       /* Nuevo: permite wrap en pantallas pequeñas */
+}
+
+footer .social-links a {
+    color: #5c1ca8;
+    text-decoration: none;
+    padding: 10px 15px;    /* Nuevo: padding para mejor espaciado */
+    transition: color 0.3s ease;
+    display: flex;         /* Nuevo: para alinear ícono y texto */
+    align-items: center;   /* Nuevo: centrar verticalmente */
+}
+
+footer .social-links a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+footer .social-links a:hover {
+    color: #6822c3;
+}
+/* También podemos ajustar el margen inferior del último evento */
+.event:last-child {
+    margin-bottom: 1px;  /* Reducido de 60px o el valor anterior */
+}
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    footer .social-links {
+        gap: 15px;         /* Menos espacio en móviles */
+        padding: 0 10px;   /* Padding para evitar que toque los bordes */
+    }
+    
+    footer .social-links a {
+        padding: 8px 12px; /* Menos padding en móviles */
+        font-size: 14px;   /* Texto más pequeño en móviles */
+    }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .event {
+        padding-left: 120px;  /* Ajustado para móviles */
+    }
+    
+    .event .circle {
+        left: 10px;
+        width: 80px;
+        height: 80px;
+        font-size: 16px;
+    }
+    
+    .event .content {
+        padding: 15px;
+    }
+}
